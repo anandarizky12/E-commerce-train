@@ -61,6 +61,18 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
       <CircularProgress />
     </div>
   ));
+  
+    if (error) {
+    Confirmation = () => (
+      <>
+        <Typography variant="h5">Error: {error}</Typography>
+        <br />
+        <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+      </>
+    );
+  }
+
+
 
 
 
